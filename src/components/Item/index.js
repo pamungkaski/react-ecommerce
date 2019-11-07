@@ -6,35 +6,42 @@ import './styles.sass';
 
 class Item extends Component {
   render() {
-  	let img = <img className="image" src={require("../../assets/images/sneakers_191107_000"+(this.props.nomor+1).toString(10)+".jpg")}/>
+  	let img 
+
+  	let naom = Math.floor(parseInt(this.props.nomor) / 5 )
   	
-  	let naom = Math.floor(this.props.nomor / 4 )
-  	
-  	if (this.props.numor % 4 == 1) {
+  	if (parseInt(this.props.nomor) % 5 == 1) {
   		img = <img className="image" src={require("../../assets/images/sneakers_191107_000"+(naom+1).toString(10)+".jpg")}/>
   	
-  		if naom >= 10 {
-  			img = <img className="image" src={require("../../assets/images/sneakers_191107_00"+(+1).toString(10)+".jpg")}/>
+  		if (naom >= 10) {
+  			img = <img className="image" src={require("../../assets/images/sneakers_191107_00"+(naom+1).toString(10)+".jpg")}/>
   		}
   	}
-  	if (this.props.numor % 4 == 2) {
+  	if (parseInt(this.props.nomor) % 5 == 2) {
   		img = <img className="image" src={require("../../assets/images/Bag_191107_000"+(naom+1).toString(10)+".jpg")}/>
   	
-  		if naom >= 10 {
+  		if (naom >= 10) {
   			img = <img className="image" src={require("../../assets/images/Bag_191107_00"+(naom+1).toString(10)+".jpg")}/>
   		}
   	}
-  	if (this.props.numor % 4 == 3) {
-  		img = <img className="image" src={require("../../assets/images/sHat_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  	if (parseInt(this.props.nomor) % 5 == 3) {
+  		img = <img className="image" src={require("../../assets/images/Hat_191107_000"+(naom+1).toString(10)+".jpg")}/>
   	
-  		if naom >= 10 {
+  		if (naom >= 10) {
   			img = <img className="image" src={require("../../assets/images/Hat_191107_00"+(naom+1).toString(10)+".jpg")}/>
   		}
   	}
-  	if (this.props.numor % 4 == 0) {
+  	if (parseInt(this.props.nomor) % 5 == 4) {
+  		img = <img className="image" src={require("../../assets/images/Watch_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  	
+  		if (naom >= 10) {
+  			img = <img className="image" src={require("../../assets/images/Watch_191107_00"+(naom+1).toString(10)+".jpg")}/>
+  		}
+  	}
+  	if (parseInt(this.props.nomor) % 5 == 0) {
   		img = <img className="image" src={require("../../assets/images/Belt_191107_000"+(naom+1).toString(10)+".jpg")}/>
   	
-  		if naom >= 10 {
+  		if (naom >= 10) {
   			img = <img className="image" src={require("../../assets/images/Belt_191107_00"+(naom+1).toString(10)+".jpg")}/>
   		}
   	}
