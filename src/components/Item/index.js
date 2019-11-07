@@ -7,42 +7,57 @@ import './styles.sass';
 class Item extends Component {
   render() {
   	let img 
-
-  	let naom = Math.floor(parseInt(this.props.nomor) / 5 )
-  	
+  	console.log(Math.floor(parseInt(this.props.nomor) / 5 )+1)
+  	let naom = Math.floor(parseInt(this.props.nomor) / 5 )+1
   	if (parseInt(this.props.nomor) % 5 == 1) {
-  		img = <img className="image" src={require("../../assets/images/sneakers_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  		if (naom < 10) {
+  			img = <img className="image" src={require("../../assets/images/sneakers_191107_000"+(naom).toString(10)+".jpg")}/>
   	
+  		}
+  		
   		if (naom >= 10) {
-  			img = <img className="image" src={require("../../assets/images/sneakers_191107_00"+(naom+1).toString(10)+".jpg")}/>
+  			img = <img className="image" src={require("../../assets/images/sneakers_191107_00"+(naom).toString(10)+".jpg")}/>
   		}
   	}
   	if (parseInt(this.props.nomor) % 5 == 2) {
-  		img = <img className="image" src={require("../../assets/images/Bag_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  		if (naom < 10) {
+  			img = <img className="image" src={require("../../assets/images/Bag_191107_000"+(naom).toString(10)+".jpg")}/>
   	
+  		}
+  		
   		if (naom >= 10) {
-  			img = <img className="image" src={require("../../assets/images/Bag_191107_00"+(naom+1).toString(10)+".jpg")}/>
+  			img = <img className="image" src={require("../../assets/images/Bag_191107_00"+(naom).toString(10)+".jpg")}/>
   		}
   	}
   	if (parseInt(this.props.nomor) % 5 == 3) {
-  		img = <img className="image" src={require("../../assets/images/Hat_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  		if (naom < 10) {
+  			img = <img className="image" src={require("../../assets/images/Hat_191107_000"+(naom).toString(10)+".jpg")}/>
   	
+  		}
+  		
   		if (naom >= 10) {
-  			img = <img className="image" src={require("../../assets/images/Hat_191107_00"+(naom+1).toString(10)+".jpg")}/>
+  			img = <img className="image" src={require("../../assets/images/Hat_191107_00"+(naom).toString(10)+".jpg")}/>
   		}
   	}
   	if (parseInt(this.props.nomor) % 5 == 4) {
-  		img = <img className="image" src={require("../../assets/images/Watch_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  		if (naom < 10) {
+  			img = <img className="image" src={require("../../assets/images/Watch_191107_000"+(naom).toString(10)+".jpg")}/>
   	
+  		}
+  		
   		if (naom >= 10) {
-  			img = <img className="image" src={require("../../assets/images/Watch_191107_00"+(naom+1).toString(10)+".jpg")}/>
+
+  			img = <img className="image" src={require("../../assets/images/Watch_191107_00"+(naom).toString(10)+".jpg")}/>
   		}
   	}
   	if (parseInt(this.props.nomor) % 5 == 0) {
-  		img = <img className="image" src={require("../../assets/images/Belt_191107_000"+(naom+1).toString(10)+".jpg")}/>
+  		if (naom < 10) {
+  			img = <img className="image" src={require("../../assets/images/Belt_191107_000"+(naom).toString(10)+".jpg")}/>
   	
+  		}
+  		
   		if (naom >= 10) {
-  			img = <img className="image" src={require("../../assets/images/Belt_191107_00"+(naom+1).toString(10)+".jpg")}/>
+  			img = <img className="image" src={require("../../assets/images/Belt_191107_00"+(naom).toString(10)+".jpg")}/>
   		}
   	}
     return(
