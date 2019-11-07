@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 
 import './styles.sass';
 
+// import logo from './logo.png' // relative path to image 
+
 class Header extends Component {
 
   constructor(props) {
@@ -86,14 +88,21 @@ class Header extends Component {
     }
   }
 
-  render() {
-    return (
-      <header className="header">
-        <h1>
+  /*
+  <h1>
           <Link onlyActiveOnIndex={true} to="/" className="logo">
             Tutuplapak
           </Link>
         </h1>
+        {this.state.menuActive ? this.menuButton: ""}
+        {this.state.nav}
+        */
+
+  render() {
+    let img = <img style={{width: "300px"}}src={require("../../assets/images/logo.jpg")} />
+    return (
+      <header className="header">
+        {img}
         {this.state.menuActive ? this.menuButton: ""}
         {this.state.nav}
       </header>
