@@ -8,9 +8,12 @@ class ItemPage extends Component {
     document.querySelector('.menu').classList.remove('open');
   }
   render() {
+    console.log(this.props.location.state.uri)
     return (
       <div className="itemPageWrapper">
-        <div className="itemImgWrapper" />
+        <div className="itemImgWrapper">
+          <img className="image" src={"../"+this.props.location.state.uri}/>
+        </div>
         <div className="itemInfoWrapper">
           <Link className="backLink" to="/">
             <span className="small">
@@ -20,7 +23,7 @@ class ItemPage extends Component {
               </svg>
             </span>All Items
           </Link>
-          <h3 className="itemName">Eloquent Javascript</h3>
+          <h3 className="itemName">{this.props.location.state.some} Eloquent Javascript</h3>
           <p className="itemCost frm">$40</p>
           <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nulla modi, odit explicabo hic doloremque commodi ab molestiae. Iure voluptatem labore et aliquid soluta inventore expedita quam vel a earum!

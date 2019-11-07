@@ -12,9 +12,10 @@ class UserItem extends Component {
       <div className="uIWrapper">
         <div className="upper">
           <div className="userImg" />
+
           <div className="itemInfo">
             <h3 className="itemName">
-              <Link to="item/1234">Eloquent Javascript</Link>
+              <Link to="item/1234"> Eloquent Javascripts</Link>
             </h3>
             <p className="itemCost frm">$40</p>
             <p className="addDate frm">23 Jan, 2017</p>
