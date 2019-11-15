@@ -7,7 +7,11 @@ import './styles.sass';
 class Item extends Component {
   render() {
   	let img, uri
-  	console.log(Math.floor(parseInt(this.props.nomor) / 5 )+1)
+    let desc = this.props.desc
+    let titles = this.props.titles
+    let harga = this.props.harga
+    // console.log(titles)
+  	// console.log(Math.floor(parseInt(this.props.nomor) / 5 )+1)
   	let naom = Math.floor(parseInt(this.props.nomor) / 5 )+1
   	if (parseInt(this.props.nomor) % 5 == 1) {
   		if (naom < 10) {
@@ -77,7 +81,7 @@ class Item extends Component {
           browserHistory.push({
   pathname: '/item/123',
   search: '?the=search',
-  state: { uri: uri }
+  state: { uri: uri, desc: desc, titles: titles, harga: harga }
 }
             );
         }} >

@@ -7,6 +7,22 @@ import './styles.sass';
 import '../../styles/animation.sass';
 
 class App extends Component {
+  componentDidMount() {
+  //       const script = document.createElement("script");
+  // script.src = "https://apis.google.com/js/platform.js";
+  // script.async = true;
+  // script.defer = true;
+  // script.onload = () => this.scriptLoaded();
+
+  // document.body.appendChild(script);
+
+  // const meta = document.createElement("meta");
+  // meta.name = "google-signin-client_id";
+  // meta.content = "YOUR_CLIENT_ID.apps.googleusercontent.com";
+  // meta.onload = () => this.metaLoaded();
+
+  // document.body.appendChild(meta);
+  }
   render() {
     return (
       <div className="wrapper">

@@ -15,6 +15,9 @@
   <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
   <% } %>
 
+  <script src="https://apis.google.com/js/platform.js" ></script>
+  <meta name="google-signin-client_id" content="961751670731-cu716vbs6h7c23jbmf65656dv8p2vn1e.apps.googleusercontent.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8"/>
@@ -23,5 +26,15 @@
 <body class="body">
 <div class="scrollbar-measure"></div>
 <div id="app"></div>
+
+<script>
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+</script>
 </body>
 </html>

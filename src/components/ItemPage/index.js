@@ -23,10 +23,10 @@ class ItemPage extends Component {
               </svg>
             </span>All Items
           </Link>
-          <h3 className="itemName">{this.props.location.state.some} Eloquent Javascript</h3>
-          <p className="itemCost frm">$40</p>
+          <h3 className="itemName">{this.props.location.state.titles}</h3>
+          <p className="itemCost frm">{this.props.location.state.harga}</p>
           <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nulla modi, odit explicabo hic doloremque commodi ab molestiae. Iure voluptatem labore et aliquid soluta inventore expedita quam vel a earum!
+            {this.props.location.state.desc}
           </p>
           <p className="seller frm">By <span>Arshad Khan</span></p>
           <button className="reqTradeBtn normalBtn">Request Trade</button>
