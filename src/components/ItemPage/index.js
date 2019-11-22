@@ -8,8 +8,16 @@ class ItemPage extends Component {
     document.querySelector('.menu').classList.remove('open');
   }
   render() {
-    console.log(this.props.location.state.uri)
+    console.log(this.props.location.state)
+    // console.log(this.props.location.state.rec2.num)
+    let naom = Math.floor(parseInt(this.props.location.state.rec1.num) / 5 )+1
+    let img1 = <img src={"../sneakers_191107_000"+(naom).toString(10)+".jpg"} />
+    naom = Math.floor(parseInt(this.props.location.state.rec2.num) / 5 )+1
+    let img2 = <img src={"../Watch_191107_000"+(naom).toString(10)+".jpg"} />
+    naom = Math.floor(parseInt(this.props.location.state.rec3.num) / 5 )+1
+    let img3 = <img src={"../Hat_191107_000"+(naom).toString(10)+".jpg"} />
     return (
+      <div>
       <div className="itemPageWrapper">
         <div className="itemImgWrapper">
           <img className="image" src={"../"+this.props.location.state.uri}/>
@@ -31,7 +39,30 @@ class ItemPage extends Component {
           <p className="seller frm">By <span>Arshad Khan</span></p>
           <button className="reqTradeBtn normalBtn">Request Trade</button>
         </div>
+        
       </div>
+      <div>
+          <h3>Recommended For You</h3>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div style={{flex: '1'}}>
+            {img1}
+            <h2>{this.props.location.state.rec1.titl}</h2>
+            <div>{this.props.location.state.rec1.harg}</div>
+            </div>
+            <div style={{flex: '1'}}>
+            {img2}
+            <h2>{this.props.location.state.rec2.titl}</h2>
+            <div>{this.props.location.state.rec1.harg}</div>
+            </div>
+            <div style={{flex: '1'}}>
+            {img3}
+            <h2>{this.props.location.state.rec3.titl}</h2>
+            <div>{this.props.location.state.rec1.harg}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     );
   }
 }
