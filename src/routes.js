@@ -10,6 +10,7 @@ import Voucher from './components/Voucher/index';
 import Trades from './components/Trades/index';
 import ItemPage from './components/ItemPage/index';
 import MyItems from './components/MyItems/index';
+import Cart from './components/Cart/index';
 import ErrorPage from './components/ErrorPage/index';
 
 export default (
@@ -22,6 +23,7 @@ export default (
     <Route path="voucher" component={Voucher} />
     <Route path="trades" component={Trades} />
     <Route path="myItems" component={MyItems} />
+    <Route path="cart" component={Cart} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

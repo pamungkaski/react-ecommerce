@@ -11,11 +11,13 @@ class ItemPage extends Component {
     console.log(this.props.location.state)
     // console.log(this.props.location.state.rec2.num)
     let naom = Math.floor(parseInt(this.props.location.state.rec1.num) / 5 )+1
-    let img1 = <img src={"../sneakers_191107_000"+(naom).toString(10)+".jpg"} />
+    let img1 = <img style={{display: 'block', width: '100%'}} src={"../sneakers_191107_000"+(naom).toString(10)+".jpg"} />
     naom = Math.floor(parseInt(this.props.location.state.rec2.num) / 5 )+1
-    let img2 = <img src={"../Watch_191107_000"+(naom).toString(10)+".jpg"} />
+    let img2 = <img style={{display: 'block', width: '100%'}} src={"../Watch_191107_000"+(naom).toString(10)+".jpg"} />
     naom = Math.floor(parseInt(this.props.location.state.rec3.num) / 5 )+1
-    let img3 = <img src={"../Hat_191107_000"+(naom).toString(10)+".jpg"} />
+    let img3 = <img style={{display: 'block', width: '100%'}} src={"../Hat_191107_000"+(naom).toString(10)+".jpg"} />
+
+    let butt = <img style={{width: '60px'}} src={require("../../assets/images/cart.png")}/>
     return (
       <div>
       <div className="itemPageWrapper">
@@ -37,7 +39,7 @@ class ItemPage extends Component {
             {this.props.location.state.desc}
           </p>
           <p className="seller frm">By <span>Arshad Khan</span></p>
-          <button className="reqTradeBtn normalBtn">Request Trade</button>
+          <a href="http://localhost:8080/cart" style={{width: '60px'}} className=" normalBtn">{butt}</a>
         </div>
         
       </div>
