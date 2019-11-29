@@ -7,6 +7,7 @@ import Profile from './components/Profile/index';
 import Login from './components/Login/index';
 import Register from './components/Register/index';
 import Voucher from './components/Voucher/index';
+import CourierService from './components/CourierService/index';
 import Trades from './components/Trades/index';
 import ItemPage from './components/ItemPage/index';
 import MyItems from './components/MyItems/index';
@@ -21,6 +22,7 @@ export default (
     <Route path="login" component={Login} />
     <Route path="register" component={Register} />
     <Route path="voucher" component={Voucher} />
+    <Route path="courier" component={CourierService} />
     <Route path="trades" component={Trades} />
     <Route path="myItems" component={MyItems} />
     <Route path="cart" component={Cart} />

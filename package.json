@@ -29,7 +29,8 @@
   "author": "Arshad Khan <arshdkhn1@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.16.1",
+    "babel-preset-es2016": "6.24.1",
+    "body-parser": "1.19.0",
     "dotenv": "^4.0.0",
     "express-session": "^1.15.1",
     "mongoose": "^4.8.2",
@@ -55,6 +56,7 @@
     "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
     "babel-loader": "6.2.10",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
     "babel-plugin-transform-react-remove-prop-types": "0.2.11",
     "babel-polyfill": "6.20.0",
